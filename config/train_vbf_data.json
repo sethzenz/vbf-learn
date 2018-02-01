@@ -1,0 +1,183 @@
+{
+    "features": {
+        "dijet_LeadJPt": {
+            "title": "$p_{t}(j_{1})$"
+        },
+        "dijet_SubJPt": {
+            "title": "$p_{t}(j_{2})$"
+        },
+        "dijet_abs_dEta": {
+            "title": "$|\\Delta\\eta|$"
+        },
+        "dijet_Mjj": {
+            "title": "$m_{jj}$"
+        },
+        "dijet_dipho_dphi_trunc":{
+            "title": "$\\Delta\\phi(\\gamma\\gamma,jj)$"
+        },
+        "dijet_dipho_dphi":{
+            "title": ""
+        },
+        "leadPho_PToM": {
+            "title": "$p_{t}(\\gamma_{1})/m_{\\gamma\\gamma}$"
+        },
+        "sublPho_PToM": {
+            "title": "$p_{t}(\\gamma_{2})/m_{\\gamma\\gamma}$"
+        },
+        "dijet_minDRJetPho": {
+            "title": "$\\min\\Delta R(jet,\\gamma)$",
+            "spectator": false
+        },
+	      "dipho_lead_elveto"    : {
+            "title": "$e^{veto}_1$"
+        },
+	      "dipho_sublead_elveto" : {
+            "title": "$e^{veto}_2$"
+        },
+	      "n_jet_30"             : {
+            "title": "$N_{p_{T}>30 GeV}$"
+        },
+        "dijet_jet1_QGL"         : {"spectator": true },
+        "dijet_jet2_QGL"         : {"spectator": true },
+        "dipho_lead_sigmaEoE"    : {"spectator": true },
+        "dipho_sublead_sigmaEoE" : {"spectator": true },
+        "dipho_cosphi"           : {"spectator": true },
+	      "dijet_Zep"              : {"spectator": true },
+        "dipho_lead_sieie"       : {"spectator": true },
+        "dipho_sublead_sieie"    : {"spectator": true },
+	      "dipho_leadEt"           : {"spectator": true },
+        "dipho_subleadEt"        : {"spectator": true },
+        "dijet_leadEta"          : {"spectator": true },
+        "dijet_subleadEta"       : {"spectator": true },
+        "dijet_dipho_dphi"       : {"spectator": true },
+        "dipho_PToM"             : {"spectator": true },
+        "dijet_dphi"             : {"spectator": false},
+        "dipho_leadIDMVA"        : {"spectator": true },
+        "dipho_subleadIDMVA"     : {"spectator": true },
+        "dipho_leadPt"           : {"spectator": true },
+        "dipho_subleadPt"        : {"spectator": true },
+        "dipho_leadEta"          : {"spectator": true },
+        "dipho_subleadEta"       : {"spectator": true },
+        "dijet_mva": {
+            "spectator": true
+        },
+        "dipho_dijet_MVA": {
+            "spectator": true
+        },
+        "dipho_mva": {
+            "spectator": true
+        },
+        "dipho_mass": {
+            "title": "$m_{\\gamma\\gamma}$",
+            "spectator": true
+        },
+        "weight": {
+            "spectator": true
+        }
+    },
+    "samples": {
+        "vbf": {
+            "type": "signal",
+            "files": [
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_VBFHToGG_M-125_13TeV_powheg_pythia8.root/vbfTagDumper/trees/vbf_125_13TeV_VBFDiJet"
+            ],
+            "cut" :  ["(dipho_mass > 100)& (dipho_mass < 180)"]
+        },
+        "ggh": {
+            "type": "background",
+            "files": [
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GluGluHToGG_M-125_13TeV_powheg_pythia8.root/vbfTagDumper/trees/ghh_125_13TeV_VBFDiJet"
+            ],
+            "cut" :  ["(dipho_mass > 100)& (dipho_mass < 180)"]
+        },
+	      "zee": {
+            "type": "background",
+            "files": [
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8.root/vbfTagDumper/trees/dyll_13TeV_VBFDiJet"
+            ],
+            "cut" :  ["(dipho_mass > 100)& (dipho_mass < 180)"]
+        },
+        "dipho": {
+            "type": "background",
+            "files": [
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa.root/vbfTagDumper/trees/dipho_13TeV_VBFDiJet"
+            ],
+            "cut" :  ["(dipho_mass > 100)& (dipho_mass < 180)"]
+        },
+        "gjet": {
+            "type": "background",
+            "files": [
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-20to40_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-20toInf_DoubleEMEnriched_MGG-40to80_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet",
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet",
+                "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet"
+            ],
+            "cut" : ["(!(prompt_pho_1==1 && prompt_pho_2==1) && (prompt_pho_1==1 || prompt_pho_2==1))"]
+        },
+        "qcd": {
+            "type": "background",
+            "files": [
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-20to40_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-20toInf_DoubleEMEnriched_MGG-40to80_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_GJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/gjet_13TeV_VBFDiJet",
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet",
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-30toInf_DoubleEMEnriched_MGG-40to80_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet",
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_QCD_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8.root/vbfTagDumper/trees/qcd_13TeV_VBFDiJet"
+            ],
+            "cut" : ["(prompt_pho_1!=1) & (prompt_pho_2!=1)" ]
+        },
+        /*"ww":{
+          "type": "background",
+          "files":[
+          "/Users/yhaddad/Projects/machine-learning/MachineLove/data/WW_TuneCUETP8M1_13TeV-pythia8.root/vbfTagDumper/trees/ww_13TeV_VBFDiJet"
+          ],
+          "cut" : ["(dipho_mass > 100)& (dipho_mass < 180)" ]
+          },
+          "zz2l2q":{
+          "type": "background",
+          "files":[
+          "/Users/yhaddad/Projects/machine-learning/MachineLove/data/ZZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8.root/vbfTagDumper/trees/zz2l2q_13TeV_VBFDiJet"
+          ],
+          "cut" : ["(dipho_mass > 100)& (dipho_mass < 180)" ]
+          },
+          "wz2l2q":{
+          "type": "background",
+          "files":[
+          "/Users/yhaddad/Projects/machine-learning/MachineLove/data/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8.root/vbfTagDumper/trees/wz2l2q_13TeV_VBFDiJet"
+          ],
+          "cut" : ["(dipho_mass > 100)& (dipho_mass < 180)" ]
+          },
+          "wglnug":{
+          "type": "background",
+          "files":[
+          "/Users/yhaddad/Projects/machine-learning/MachineLove/data/WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8.root/vbfTagDumper/trees/wglnug_13TeV_VBFDiJet"
+          ],
+          "cut" : ["(dipho_mass > 100)& (dipho_mass < 180)" ]
+          },
+          "zg2lg":{
+          "type": "background",
+          "files":[
+          "/Users/yhaddad/Projects/machine-learning/MachineLove/data/ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8.root/vbfTagDumper/trees/zg2lg_13TeV_VBFDiJet"
+          ],
+          "cut" : ["(dipho_mass > 100)& (dipho_mass < 180)" ]
+          },*/
+        "data": {
+            "type": "data",
+            "files": [
+		            "/Users/yhaddad/Projects/machine-learning/MachineLove/data/output_DoubleEG_All.root/vbfTagDumper/trees/Data_13TeV_VBFDiJet"
+            ],
+            "cut" :  ["(dipho_mass > 100)& (dipho_mass < 180)"]
+        }
+    },
+    "selection": [
+        "dijet_LeadJPt        > 40",
+        "dijet_SubJPt         > 30",
+        "dipho_lead_ptoM      > (1/4.0)",
+        "dijet_Mjj            > 0",
+        "dipho_sublead_ptoM   > (1/5.0)",
+        "(dipho_mass > 100)   & (dipho_mass < 180)"
+    ]
+
+}
