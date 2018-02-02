@@ -93,8 +93,8 @@ class train():
         logger.info( "  __  /|_/ /__  / __  /| | ")
         logger.info( "  _  /  / / _  /___  ___ | ")
         logger.info( "  /_/  /_/  /_____/_/  |_| ")
+        logger.info( "  author : yhaddad@cern.ch ")
         logger.info( "  ")
-        logger.info( "%s : %s" % (__version__, __author__))
         self.configfile = config
         self.samples    = {}
         self.selection  = {}
