@@ -22,10 +22,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     "jsmin",
     "termcolor",
-    "progressbar",
-    "jsonmerge",
-    "numpy",
-    "pandas",
+    "progressbar"
 ]
 
 test_requirements = []
@@ -45,7 +42,7 @@ setup(
     package_dir          = {'mlearn': 'mlearn'},
     include_package_data = True,
     #scripts              = ['heppi-draw','macros/makeplotcard.py'],
-    #install_requires     = requirements,
+    install_requires     = requirements,
     license     = "ISCL",
     zip_safe    = False,
     keywords    = ['vbf_mlearn','vbf','plotting', 'pyROOT', 'ROOT', 'HEP', 'CERN'],
