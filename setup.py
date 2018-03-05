@@ -29,7 +29,7 @@ requirements = [
 ]
 
 test_requirements = []
-version  = '0.2.6'
+version  = '0.2.7'
 setup(
     name             = 'mlearn',
     version          =  version,
